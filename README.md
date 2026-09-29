@@ -1,6 +1,9 @@
 # Multi-Omics Ecotoxicology of *Daphnia magna* Along the Danube River
 
-**Data Jamboree Group Project — MSc Bioinformatics, University of Birmingham (2025)**
+[![R](https://img.shields.io/badge/R-≥4.3-blue)](https://www.r-project.org/)
+[![Bioconductor](https://img.shields.io/badge/Bioconductor-DESeq2%20|%20MOFA2-green)](https://www.bioconductor.org/)
+[![License](https://img.shields.io/badge/License-Educational-yellow)](LICENSE)
+[![Multi-Omics](https://img.shields.io/badge/Multi--Omics-Transcriptomics%20|%20Metabolomics-orange)](.)
 
 ## Research Question
 
