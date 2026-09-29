@@ -89,16 +89,6 @@ Data-Jamboree-Danube-Daphnia/
 | Network analysis | STRING + Cytoscape + cytoHubba (MCC, Degree, Betweenness) | `pathway_network_analysis/processing.Rmd` |
 | Chemical–gene correlation | Spearman correlation (padj < 0.05) | `pathway_network_analysis/processing.Rmd` |
 
-## Group Members
-
-| Member | Role |
-|--------|------|
-| Rayane | Transcriptomics — DESeq2 per-site analysis, QC |
-| Rush | Metabolomics positive mode — QC, EDA, differential, annotation |
-| Snehal | Metabolomics negative mode — EDA, differential, integration prep |
-| Haziq | Multi-omics integration — MOFA2, cross-validation with WGCNA |
-| Nubaid | Pathway enrichment, network analysis, biological interpretation |
-
 ## Data Availability
 
 The original data files are **not included** in this repository due to intellectual property restrictions from the module organisers. See `data/README.md` for a list of required input files.
