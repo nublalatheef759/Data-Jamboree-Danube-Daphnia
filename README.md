@@ -55,7 +55,8 @@ Data-Jamboree-Danube-Daphnia/
 │   └── README.md
 │
 ├── transcriptomics/
-│   └── transcriptomics.R                 #   DESeq2, PCA, QC, WGCNA, volcano plots, ortholog mapping
+│   ├── transcriptomics.R                 #   DESeq2, PCA, QC, WGCNA, volcano plots, ortholog mapping
+│   └── README_transcriptomics_results.txt     # Shared DEG counts, WGCNA modules, D11/D12 chemistry
 │
 ├── metabolomics/                          # Positive- and negative-mode metabolomics
 │   ├── metabolomics_positive_EDA.R       #   Pos mode: QC, EDA, ANOVA, PERMANOVA, volcano plots
@@ -66,16 +67,14 @@ Data-Jamboree-Danube-Daphnia/
 ├── integration/                           # Multi-omics integration
 │   ├── MOFA2_integration.R               #   MOFA2: 10 factors, 3 views, 142 shared samples
 │   └── README.md                         #   Variance explained & key results
+│   └── README_integration_inputs.txt     # Module eigengenes, gene assignments, correlations
 │
 ├── pathway_network_analysis/              # Pathway enrichment & network analysis
 │   ├── pathway_network_analysis.R        #   DESeq2 per-site, orthologs, STRING, AOP, correlations
 │   ├── README_network_analysis.txt       #   STRING/Cytoscape/cytoHubba hub gene results
 │   ├── README_chemical_correlation.txt   #   72 significant gene × chemical correlations
 │   └── README_IMPaLA.txt                 #   24 significant multi-omics pathways
-│
-├── README_transcriptomics_results.txt     # Shared DEG counts, WGCNA modules, D11/D12 chemistry
-├── README_integration_inputs.txt          # Module eigengenes, gene assignments, correlations
-├── README_pathway_enrichment_inputs.txt   # Pooled DEG lists, universal responders, MEblue genes
+│   └── README_pathway_enrichment_inputs.txt   # Pooled DEG lists, universal responders, MEblue genes
 ```
 
 ## Methods Summary
