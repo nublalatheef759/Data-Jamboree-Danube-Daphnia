@@ -60,7 +60,6 @@ Data-Jamboree-Danube-Daphnia/
 ├── metabolomics/                          # Positive- and negative-mode metabolomics
 │   ├── metabolomics_positive_EDA.R       #   Pos mode: QC, EDA, ANOVA, PERMANOVA, volcano plots
 │   ├── metabolomics_positive_integration.R #  Pos mode: pathway annotation & team handoff
-│   ├── metabolomics_EDA.R               #   Pos mode: detailed exploratory analysis
 │   ├── metabolomics_negative_EDA.R       #   Neg mode: PCA, ANOVA, PERMANOVA, heatmap, annotation
 │   └── metabolomics_negative_integration.R #  Neg mode: integration deliverables (169 sig features)
 │
