@@ -57,14 +57,12 @@ Data-Jamboree-Danube-Daphnia/
 ├── transcriptomics/
 │   └── transcriptomics.R                 #   DESeq2, PCA, QC, WGCNA, volcano plots, ortholog mapping
 │
-├── metabolomics_positive/                 # Positive-mode metabolomics
-│   ├── metabolomics_positive_EDA.R       #   QC, EDA, ANOVA, PERMANOVA, volcano plots
-│   ├── metabolomics_positive_integration.R #  Pathway annotation & team handoff
-│   └── metabolomics_EDA.R               #   Detailed exploratory analysis
-│
-├── metabolomics_negative/                 # Negative-mode metabolomics
-│   ├── metabolomics_negative_EDA.R       #   PCA, ANOVA, PERMANOVA, heatmap, annotation
-│   └── metabolomics_negative_integration.R #  Integration deliverables (169 sig features)
+├── metabolomics/                          # Positive- and negative-mode metabolomics
+│   ├── metabolomics_positive_EDA.R       #   Pos mode: QC, EDA, ANOVA, PERMANOVA, volcano plots
+│   ├── metabolomics_positive_integration.R #  Pos mode: pathway annotation & team handoff
+│   ├── metabolomics_EDA.R               #   Pos mode: detailed exploratory analysis
+│   ├── metabolomics_negative_EDA.R       #   Neg mode: PCA, ANOVA, PERMANOVA, heatmap, annotation
+│   └── metabolomics_negative_integration.R #  Neg mode: integration deliverables (169 sig features)
 │
 ├── integration/                           # Multi-omics integration
 │   ├── MOFA2_integration.R               #   MOFA2: 10 factors, 3 views, 142 shared samples
@@ -88,8 +86,8 @@ Data-Jamboree-Danube-Daphnia/
 |----------|--------------|--------|
 | Differential gene expression | DESeq2 (padj < 0.05, \|log2FC\| > 1) | `transcriptomics/transcriptomics.R` |
 | Gene co-expression | WGCNA (17 modules, top 5,000 genes) | `transcriptomics/transcriptomics.R` |
-| Metabolomics QC & normalisation | PQN + KNN imputation + glog transform | `metabolomics_positive/metabolomics_positive_EDA.R` |
-| Metabolomics differential | ANOVA + PERMANOVA + volcano plots | Both metabolomics folders |
+| Metabolomics QC & normalisation | PQN + KNN imputation + glog transform | `metabolomics/metabolomics_positive_EDA.R` |
+| Metabolomics differential | ANOVA + PERMANOVA + volcano plots | `metabolomics/` (both modes) |
 | Multi-omics integration | MOFA2 (10 factors, 3 views) | `integration/MOFA2_integration.R` |
 | Ortholog mapping | OrthoDB via D. pulex → Drosophila → Human | `pathway_network_analysis/pathway_network_analysis.R` |
 | Pathway enrichment | WebGestalt (ORA), iDEP, IMPaLA | `pathway_network_analysis/pathway_network_analysis.R` |
