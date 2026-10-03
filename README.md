@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/License-Educational-yellow)](LICENSE)
 [![Multi-Omics](https://img.shields.io/badge/Multi--Omics-Transcriptomics%20|%20Metabolomics-orange)](.)
 
-**Data Jamboree Group Project — MSc Bioinformatics, University of Birmingham (2025)**
+**Data Jamboree Group Project — MSc Bioinformatics, University of Birmingham (2026)**
 
 ## Research Question
 
