@@ -76,7 +76,6 @@ Data-Jamboree-Danube-Daphnia/
 ├── README_transcriptomics_results.txt     # Shared DEG counts, WGCNA modules, D11/D12 chemistry
 ├── README_integration_inputs.txt          # Module eigengenes, gene assignments, correlations
 ├── README_pathway_enrichment_inputs.txt   # Pooled DEG lists, universal responders, MEblue genes
-└── README_presentation_figures.txt        # Guide to key presentation figures
 ```
 
 ## Methods Summary
