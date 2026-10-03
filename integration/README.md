@@ -1,12 +1,6 @@
 # Data Jamboree — Multi-Omics Integration 
 ---
 
-## Summary
-
-MOFA2 was rerun after identifying that the original analysis used the wrong positive-mode metabolomics file (`polar_pos_pqn.csv` — PQN only, no glog transformation). The corrected analysis uses `polar_pos_pqn_imputed_glog.csv`, matching the preprocessing applied to the negative-mode data. This correction revealed shared variance across all three omics layers that was absent in the original model.
-
----
-
 ## Files in this folder
 
 | File | Description |
@@ -54,12 +48,6 @@ MOFA2 was rerun after identifying that the original analysis used the wrong posi
   - Metabo_Pos: 1,285 glog-transformed features
 - All views scaled to unit variance (`scale_views = TRUE`)
 - Factors: 10, seed = 42, convergence mode = medium
-
-### 3. Key Difference from Original Analysis
-- Original used `polar_pos_pqn.csv` (PQN only, no imputation, no glog)
-- Corrected uses `polar_pos_pqn_imputed_glog.csv` (PQN + KNN imputed + glog)
-- Result: positive-mode metabolomics now contributes meaningful variance (up to 21.8% on Factor 3, vs max 3.33% in original)
-
 ---
 
 ## Results — Variance Explained per Factor
