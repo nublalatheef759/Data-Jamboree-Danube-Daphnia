@@ -40,9 +40,7 @@ knitr::opts_chunk$set(
 ## Libraries
 
 ```{r libraries}
-# If any package is missing, run: install.packages("package_name")
-# For pheatmap: install.packages("pheatmap")
-# For vegan:    install.packages("vegan")
+# Ensure all required packages are installed before running
 
 library(ggplot2)
 library(reshape2)
@@ -74,7 +72,6 @@ cat("Colour palette defined for CK + D01-D12.\n")
 
 ```{r load-data}
 # ---- SET YOUR PATH HERE ----
-setwd("C:/Users/hrush/Desktop/UoB/LECTURE/Computational Biology/Data Jamboree")
 
 # Load the main data file
 # Rows = metabolite features (m/z peaks detected by the mass spectrometer)
@@ -1133,7 +1130,6 @@ ggplot(head(df_kegg_freq, 20), aes(x = reorder(kegg_id, count), y = count)) +
 # MetaboAnalyst renames features internally so IDs don't match
 # ================================================================
 
-setwd("C:/Users/hrush/Desktop/UoB/LECTURE/Computational Biology/Data Jamboree")
 
 # Load annotation files
 kegg_annot <- read.table(
@@ -1217,7 +1213,6 @@ cat("Saved: sig_features_site_annotated.csv\n")
 
 ```{r}
 # FOR ANNOTATION MATCHING — POSITIVE MODE (MetaboAnalyst anova_posthoc.csv)
-setwd("C:/Users/hrush/Desktop/UoB/LECTURE/Computational Biology/Data Jamboree")
 
 library(dplyr)
 library(tidyr)
@@ -1316,7 +1311,6 @@ cat(paste(kegg_list, collapse = "\n"))
 
 ```{r}
 # FOR ANNOTATION MATCHING — POSITIVE MODE (MetaboAnalyst anova_posthoc.csv)
-setwd("C:/Users/hrush/Desktop/UoB/LECTURE/Computational Biology/Data Jamboree")
 library(dplyr)
 library(tidyr)
 
