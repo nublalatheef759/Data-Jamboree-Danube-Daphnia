@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/badge/License-Educational-yellow)](LICENSE)
 [![Multi-Omics](https://img.shields.io/badge/Multi--Omics-Transcriptomics%20|%20Metabolomics-orange)](.)
 
+**Data Jamboree Group Project — MSc Bioinformatics, University of Birmingham (2025)**
+
 ## Research Question
 
 > How do different chemical pollution mixtures along the Danube River affect the biology of *Daphnia magna*, and which pollutants and biological pathways have the greatest impact?
@@ -52,22 +54,24 @@ Data-Jamboree-Danube-Daphnia/
 ├── data/                                  # Empty — see data/README.md for required files
 │   └── README.md
 │
-├── transcriptomics/                       # DESeq2 differential expression (Rayane) — pending
+├── transcriptomics/
+│   └── transcriptomics.R                 #   DESeq2, PCA, QC, WGCNA, volcano plots, ortholog mapping
 │
-├── metabolomics_positive/                 # Positive-mode metabolomics (Rush)
-│   ├── metabolomics_complete_analysis.Rmd #   Full pipeline: QC → EDA → differential → annotation
-│   └── metabolomics_EDA.Rmd              #   Detailed exploratory analysis notebook
+├── metabolomics_positive/                 # Positive-mode metabolomics
+│   ├── metabolomics_positive_EDA.R       #   QC, EDA, ANOVA, PERMANOVA, volcano plots
+│   ├── metabolomics_positive_integration.R #  Pathway annotation & team handoff
+│   └── metabolomics_EDA.R               #   Detailed exploratory analysis
 │
-├── metabolomics_negative/                 # Negative-mode metabolomics (Snehal)
-│   ├── EDAMetabo.Rmd                     #   PCA, ANOVA, PERMANOVA, heatmap, annotation
-│   └── IntegrationNegMetabo.Rmd          #   Integration deliverables (169 sig features)
+├── metabolomics_negative/                 # Negative-mode metabolomics
+│   ├── metabolomics_negative_EDA.R       #   PCA, ANOVA, PERMANOVA, heatmap, annotation
+│   └── metabolomics_negative_integration.R #  Integration deliverables (169 sig features)
 │
-├── integration/                           # Multi-omics integration (Haziq)
+├── integration/                           # Multi-omics integration
 │   ├── MOFA2_integration.R               #   MOFA2: 10 factors, 3 views, 142 shared samples
 │   └── README.md                         #   Variance explained & key results
 │
-├── pathway_network_analysis/              # Pathway enrichment & network analysis (Nubaid)
-│   ├── processing.Rmd                    #   DESeq2 per-site, orthologs, STRING, AOP, correlations
+├── pathway_network_analysis/              # Pathway enrichment & network analysis
+│   ├── pathway_network_analysis.R        #   DESeq2 per-site, orthologs, STRING, AOP, correlations
 │   ├── README_network_analysis.txt       #   STRING/Cytoscape/cytoHubba hub gene results
 │   ├── README_chemical_correlation.txt   #   72 significant gene × chemical correlations
 │   └── README_IMPaLA.txt                 #   24 significant multi-omics pathways
@@ -82,15 +86,15 @@ Data-Jamboree-Danube-Daphnia/
 
 | Analysis | Tool / Method | Script |
 |----------|--------------|--------|
-| Differential gene expression | DESeq2 (padj < 0.05, \|log2FC\| > 1) | `pathway_network_analysis/processing.Rmd` |
-| Gene co-expression | WGCNA (17 modules, top 5,000 genes) | `pathway_network_analysis/processing.Rmd` |
-| Metabolomics QC & normalisation | PQN + KNN imputation + glog transform | `metabolomics_positive/metabolomics_complete_analysis.Rmd` |
+| Differential gene expression | DESeq2 (padj < 0.05, \|log2FC\| > 1) | `transcriptomics/transcriptomics.R` |
+| Gene co-expression | WGCNA (17 modules, top 5,000 genes) | `transcriptomics/transcriptomics.R` |
+| Metabolomics QC & normalisation | PQN + KNN imputation + glog transform | `metabolomics_positive/metabolomics_positive_EDA.R` |
 | Metabolomics differential | ANOVA + PERMANOVA + volcano plots | Both metabolomics folders |
 | Multi-omics integration | MOFA2 (10 factors, 3 views) | `integration/MOFA2_integration.R` |
-| Ortholog mapping | OrthoDB via D. pulex → Drosophila → Human | `pathway_network_analysis/processing.Rmd` |
-| Pathway enrichment | WebGestalt (ORA), iDEP, IMPaLA | `pathway_network_analysis/processing.Rmd` |
-| Network analysis | STRING + Cytoscape + cytoHubba (MCC, Degree, Betweenness) | `pathway_network_analysis/processing.Rmd` |
-| Chemical–gene correlation | Spearman correlation (padj < 0.05) | `pathway_network_analysis/processing.Rmd` |
+| Ortholog mapping | OrthoDB via D. pulex → Drosophila → Human | `pathway_network_analysis/pathway_network_analysis.R` |
+| Pathway enrichment | WebGestalt (ORA), iDEP, IMPaLA | `pathway_network_analysis/pathway_network_analysis.R` |
+| Network analysis | STRING + Cytoscape + cytoHubba (MCC, Degree, Betweenness) | `pathway_network_analysis/pathway_network_analysis.R` |
+| Chemical–gene correlation | Spearman correlation (padj < 0.05) | `pathway_network_analysis/pathway_network_analysis.R` |
 
 ## Data Availability
 
