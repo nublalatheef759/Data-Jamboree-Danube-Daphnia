@@ -1,6 +1,4 @@
-# Data Jamboree — Multi-Omics Integration (Corrected)
-## Role: Multi-Omics Integration (MOFA2)
-## Reanalysis by: [Your Name]
+# Data Jamboree — Multi-Omics Integration 
 
 ---
 
